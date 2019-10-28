@@ -1,8 +1,13 @@
 from setuptools import setup
 
 setup(
-    name="mbuild-fcc",
+    name="mbuild_fcc",
     install_requires="mbuild",
-    entry_points={"mbuild": ["fcc = mbuild_fcc"]},
+    entry_points={
+        "mbuild.plugins":[
+            "FCC = mbuild_fcc.mbuild_fcc:FCC"
+        ]
+    },
     py_modules=["mbuild_fcc"],
 )
+
